@@ -1,0 +1,492 @@
+html, body {
+	height: 100%;
+}
+body{
+	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	clear: both;
+	background-color: rgb(243,243,243);
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+}
+.big-container {
+	flex-grow: 1;
+	overflow: hidden;
+}
+button{
+	background-color: rgb(220,220,220);
+	border: none;
+}
+button:focus {
+	outline: none;
+}
+
+.view-selected{
+	border: 3px solid #8f2831;
+	padding: 2px !important;
+}
+.smallcat-selected{
+	background: #ffffff;
+	color: #2c3e50;
+	border-top: none !important;
+	padding-top: 11px !important;
+	font-weight: bold;
+}
+.smallcat-selected:hover {
+	background: #ffffff !important;
+}
+a{
+	color: blue;
+}
+a:click{
+	color: purple;
+}
+
+.neat-button{
+	text-decoration: none;
+	color: #dfdfdf;
+	background-color: rgba(0,0,0,0);
+	border-radius: 4px;
+}
+
+.custom-clear{
+	background-color: rgba(0,0,0,0);
+}
+.custom-underline{
+	text-decoration: underline;
+}
+
+.ui-button:hover, .ui-button:focus{
+	background-color: rgba(0,0,0,.05);
+}
+
+.body-section{
+	min-width: 200px;
+	float: left;
+}
+.body-section h4{
+	font-size: 1.3em;
+	color: rgba(0,0,0,.5);
+	margin: 5px 0;
+}
+
+.info{
+	margin-bottom: 2px;
+}
+
+/*******
+	LOGIN
+**********/
+#login {
+	background-color: rgb(212,212,212);
+	text-align: center;
+	width: 30%;
+	padding: 5%;
+	float: left;
+}
+#login input{
+	margin-left: 6px;
+}
+
+.image{
+	float: left;
+	width: 60%;
+	text-align: center;
+	vertical-align: center;
+}
+
+.image img{
+	width: 60%;
+	margin: 5%;
+}
+
+
+h2{
+	text-decoration: none;
+}
+
+
+/*********
+	HEADER
+*********/
+header{
+	background-color: #3d577a;
+	padding: 14px;
+	color: white;
+}
+header::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.head{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/* Logo */
+.head > div > img {
+	width: 50px;
+	float: left;
+	margin-right: 14px;
+}
+.head h1{
+	font-weight: 775;
+	font-size: 3em;
+	float: left;
+}
+
+/*nav*/
+.head nav{
+	float: right;
+}
+.head nav ul{
+	position: relative;
+	right: 0;
+}
+.head nav ul li{
+	display: inline-block;
+	border: 1px solid rgba(0,0,0,0);
+	padding: 6px;
+	transition: all .1s;
+	border-radius: 2px;
+}
+#profilePic {
+	vertical-align: middle;
+	max-width: 45px;
+}
+.head nav ul li:hover{
+	background: rgba(255,255,255,.14);
+	border: 1px solid rgba(0,0,0,.4);
+}
+.head nav i {
+	display: inline;
+	font-size: inherit;
+}
+.head nav h2 {
+	display: inline;
+}
+.head nav a{
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+.head nav img{
+	height: auto;
+	width: 70px;
+}
+
+/**********
+	ASIDE client page   
+**********/
+aside{
+	float: left;
+	height: 100%;
+	background: #2c3e50;
+	max-width: 290px;
+	min-width: 250px;
+	color: #dfdfdf;
+}
+/* "add client" button */
+#ClientCategories form{
+	line-height: 1.5em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.GreenAdd, .RedRemove, .BlueAdd{
+	margin: 10px;
+	padding: 10px;
+	border: none;
+	color: #ffffff;
+	font-weight: 600;
+	border-radius: 2px;
+}
+.GreenAdd:hover{
+	cursor: pointer;
+	background: linear-gradient(180deg, #32c754, #26a143 90%);
+}
+.GreenAdd {
+	background: #32c754;
+}
+.RedRemove {
+	background: #EA2027;
+}
+.RedRemove:hover{
+	cursor: pointer;
+	background: linear-gradient(180deg, #EA2027, rgb(204, 27, 33) 90%);
+}
+.GreenAdd span, .RedRemove span{
+	padding: 2px 5px 3px 5px;
+	border: 1px solid rgb(180,180,180);
+}
+
+/*side navigation*/
+.SmallCategories {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.SmallCategories button{
+	display: list-item;
+	list-style: none;	
+	font-size: 1em;
+	text-align: left;
+	padding: 5px;
+	width: 100%;
+	flex-grow: 1;
+}
+.SmallCategories button:hover{
+	cursor: pointer;
+	background-color: rgba(255,255,255,.10);
+}
+#ClientCategories {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#ClientCategories h2 {
+	font-weight: 600;
+	margin: 1em 0.3em;
+	color: #e1e1e1;
+}
+
+#ClientCategories .AllClients{
+	position: relative;
+	margin-top: 1em;
+	bottom: 0;
+	width: 100%;
+}
+
+
+
+/***************
+	ARTICLE accounts page
+***************/
+
+article{
+	width: 100%;
+	height: auto;
+}
+
+article .AddRemove{
+	width: 30%;
+	background-color: #3d577a;
+	float: left;
+	padding: 10px;
+}
+
+article nav.SortBy{
+	float: left;
+	width: auto;
+	margin: auto;
+	padding: 15px;
+}
+
+/*********
+	main 
+*********/
+main{
+	padding: 26px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	border: 2px solid #636e72;
+}
+
+main ul li{
+	height: auto;
+	margin-bottom: 20px;
+	display: block;
+	clear: both;
+}
+
+/*the head*/
+.sectionHeading {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+#sectionTitle {
+	font-size: 30px;
+	font-weight: 500;
+}
+#search {
+	font-size: 1em;
+	margin-right: 1em;
+}
+.ListHead{
+	white-space: nowrap;
+	background-color: #ffffff;
+	padding: 12px;
+	border-top: 4px solid #8f2831;
+	box-shadow: 1px 1px 2px #636e72;
+	margin-bottom: 1px;
+	border-radius: 0px 0px 4px 4px;
+	transition: 0.2s;
+}
+.ListHead:hover{
+	cursor: pointer;
+	transform: scale(1.01);
+}
+.ListHead *{
+	display: inline-block;
+}
+
+.ListHead h4{
+	background-color: white;
+	font-weight: 500;
+	font-size: 1.2em;
+	padding: 2px;
+	color: #000000;
+}
+.ListHead > p {
+	font-size: 0.85em;
+	font-weight: 500;
+	color: #5f5f5f;
+	margin: 0 4px;
+}
+.ListHead .CHeadTopLinks{
+	float: right;
+	display: none;
+}
+.ListHead button, .ClientNextPhase {
+	background: none;
+	color: #8f2831;
+	margin-right: 1em;
+	padding: 6px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.ListHead button:hover, .ClientNextPhase:hover {
+	cursor: pointer;
+	background-color: #efefef;
+}
+.Client i {
+	margin: 0 .3em;
+}
+/*the body*/
+#ClientList {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.ListBody{
+	background-color: #ffffff;
+	font-size: 14px;
+	width: 100%;
+	position: relative;
+	display: none;
+	border-radius: 0px 0px 4px 4px;
+}
+
+
+.Client .SmallCategories{
+	background-color: rgb(243,243,243);
+	width: 100%;
+	flex-direction: row;
+	justify-content: start;
+	border-left: 1px solid rgb(160,160,160);
+	border-radius: 0px 0px 4px 4px;
+}
+
+.Client .SmallCategories button {
+	padding: 10px;
+	border: 1px solid rgb(160,160,160);
+	border-left: none;
+	transition: 0.2s;
+	text-align: center;
+	max-width: 10em;
+	border-radius: 0px 0px 4px 4px;
+	font-size: 1.1em;
+}
+
+.Client .SmallCategories button:hover {
+	background-color: #fafafa;
+}
+
+.ClientData{
+	border: 1px solid rgb(180,180,180);
+	border-bottom: none;
+	padding: 1em 1em 3em 1em;
+	display: flex;
+}
+.column {
+	flex-direction: column;
+}
+
+.ClientData p{
+	margin-right: 2em;
+	background-color: white;
+	border: 1px solid #dddddd;
+	padding: 8px;
+	max-width: 200px;
+}
+.ClientData .Info{
+	padding: 4px;
+}
+.ClientData h5{
+	margin-right: 8px;
+}
+.ClientData textarea {
+	vertical-align: top;
+}
+.ClientNextPhase{
+	position: absolute;
+	bottom: 3.75em;
+	right: 1em;
+	color: #2c3e50;
+}
+.BlueAdd {
+	background-color: #2c3e50;
+}
+.BlueAdd:hover{
+	cursor: pointer;
+	background: linear-gradient(180deg, #2c3e50, #263849 90%);
+}
+.comContainer {
+	border: 1px solid #8a7676;
+	padding: 0.2em;
+	position: relative;
+	border-radius: 2px;
+}
+.comContainer button {
+	position: absolute;
+	top: .2em;
+	right: .2em;
+	color: #888888;
+	background: none;
+	border: 1px solid #dddddd;
+	border-radius: 100%;
+	transition: 0.2s;;
+}
+.comContainer button:hover {
+	cursor: pointer;
+	color: rgb(204, 27, 33);
+	border-color: rgb(204, 27, 33);
+	/* rgb(204, 27, 33) #EA2027*/
+}
+.comContainer button i {
+	margin: .1em 0em;
+	font-size: 1.2em;
+}
+.comContainer p {
+	max-width: 100%;
+	border: none;
+}
+.comContainer strong {
+	font-weight: 600;
+}
+.comContainer img {
+	width: 30px;
+	border-radius: 100%;
+}
+.comContainer div {
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,10 @@
+#Dependencies
+node_modules/
+#Environmental Variables
+.env
+#VS Code settings
+.vs/
+#Yarn files
+yarn.lock
+#Google auth tokens
+tokens.json

@@ -1,0 +1,19 @@
+{
+  "name": "gns",
+  "version": "1.0.0",
+  "description": "Client Management Application for Global Natural Stones",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ryan Wolf",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^6.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "googleapis": "^47.0.0",
+    "ws": "^7.2.1"
+  }
+}

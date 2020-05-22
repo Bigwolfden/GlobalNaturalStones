@@ -1,0 +1,154 @@
+body{
+	background-color: rgb(243,243,243);
+	font-size: 16px;
+	padding: 15px;
+	font-family: "Open Sans", sans-serif;
+}
+h2 {
+	text-decoration: underline;
+}
+form {
+	width: 90%;
+}
+.bigTextBox{
+	resize: both;
+	overflow: auto;
+	min-height: 30px;
+	min-width: 160px;
+	/*
+	height: 100px;
+	width: 300px;
+	*/
+}
+.labelfor-BigText{
+	vertical-align: top;
+}
+.Datepick{
+	background-color: #d9d9d9;
+	width: 80px;
+}
+
+#NotesEstimates *{
+	vertical-align: top;
+}
+
+input,select, textarea {
+	margin: 10px;
+}
+
+fieldset{
+	background-color: #fff;
+	border: 1px solid rgb(160,160,160);
+	border-left: 5px solid #8f2831;
+	padding: 5px;
+	width: 110%;
+}
+
+fieldset section:first-of-type{
+	border-top: none;
+}
+
+.Comments {
+	margin-top: 10px;
+}
+fieldset section{
+	width: auto;
+	padding: 1em;
+}
+#Dates {
+	display: flex;
+	flex-direction: column;
+}
+#Dates > section {
+	display: flex;
+}
+#saveAll{
+	margin-top: 15px;
+}
+#addDate{
+	margin-top: 10px;
+}
+h2{
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin-bottom: .6em;
+}
+.sideNav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 40px;
+	background-color: #dfe4e8;
+	border: 1px solid rgb(160,160,160);
+  }
+.sideNav #closeSideNav {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	font-size: 50px;
+	margin-left: 30px;
+	transition: .5s;
+	color: black;
+	text-decoration: none;
+}
+.sideNav #openSideNav {
+  transition: .5s;
+}
+#theSideNavContent{
+	font-size: 12px;
+	padding-left: 5px;
+}
+#theSideNavContent label{
+	margin-top: 5px;
+	display: block;
+	margin-left: 0px;
+	width: 90%;
+}
+#theSideNavContent button{
+	display: block;
+	margin-top: 5px;
+}
+#theSideNavContent input[type="text"]{
+	float: left;
+	width: 80%;
+}
+#openSideNav{
+	z-index: 999;
+	top: 50%;
+	right: 0;
+	position: fixed;
+	width: 40px;
+	height: 25px;
+	font-size: 13px;
+	background-color: #2c3e50;
+	color: #ffffff;
+	border: none;
+	border-radius: 2px;
+}
+button:hover{
+	background-color: #ccc;
+	color: black;
+	cursor: pointer;
+}
+#quote_sent{
+	width: 90%;
+}
+.SaveSect, .SaveAll {
+	background-color: #2c3e50;
+	margin: 10px;
+    padding: 10px;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.SaveSect:hover, .SaveAll:hover {
+	color: #ffffff;
+	cursor: pointer;
+    background: linear-gradient(180deg, #2c3e50, #263849 90%);
+}
