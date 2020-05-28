@@ -100,10 +100,18 @@ class Authenticator {
             auth: this.authClient,
             version: 'v2'
         });
-        //Get the user data and deconstruct it
-        //TODO: add a catch that calls a refresh to get a new access token
-        const {data} = await oauth.userinfo.get();
-        return data;
+        
+        try {
+            //Get the user data and deconstruct it
+            const {data} = await oauth.userinfo.get();
+            return data;
+        } catch (error) {
+            //Get a new access token if the old one expired and throws an error
+            await this.needsTokens();
+            const {data} = await oauth.userinfo.get();
+            return data;
+        }
+        
     }
     /**
      * Deletes the file containing the refresh token
