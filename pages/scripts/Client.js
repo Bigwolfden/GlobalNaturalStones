@@ -2,7 +2,6 @@ const { ipcRenderer } = require('electron');
 const CDATA_FADESPEED = 200;
 let AllClients = [];
 
-
 /**
 * Opens the comment menu/submits the comment
 * @param {number} id The id of the client that the user is commenting on
@@ -50,7 +49,12 @@ $(document).ready(function(){
 /****************************************
 *****************IPC********************
 ****************************************/
-
+let myNotification = new Notification('Title', {
+	body: 'Lorem Ipsum Dolor Sit Amet'
+  });
+  myNotification.onclick = () => {
+    console.log('Notification clicked')
+  }
 	/*********SEND*********/
 	$("#ClientList").on("click", ".btnEditInfo", function(e) {
 		//send the 'display-client-edit' command to the main js (will display new page with client info)

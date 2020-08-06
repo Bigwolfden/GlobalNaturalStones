@@ -206,62 +206,18 @@ function createClientViewer({user, tokens}) {
   client.on('message', async rawMessage => {
     const message = JSON.parse(rawMessage);
     
-    switch(message.event) {
+    if (message.event == 0) {
       //CLIENT_STAGE1 event
-      case 0:
-        sendOnceLoaded("updatedClients", {cliarr: message.data, stage: 1});
-        win.main.webContents.send("updatedClients", {cliarr: message.data, stage: 1});
-        break;
-        
-      //CLIENT_STAGE2 event
-      case 1:
-        win.main.webContents.send("updatedClients", {cliarr: message.data, stage: 2});
-        break;
-        
-      //CLIENT_ARCHIVED event
-      case 2:
-        win.main.webContents.send("updatedClients", {cliarr: message.data, stage: 3});
-        break;
-      
-      //UPDATE
-      case 3:
-        win.main.webContents.send("updateOneClient", message.data);
-        break;
-      
-      //ADD_COMMENT
-      case 4:
-        win.main.webContents.send("addComment", message.data);
-        break;
-      
-      //DELETE_COMMENT
-      case 5:
-        win.main.webContents.send("delComment", message.data);
-        break;
-      //USERS
-      case 6:
-        win.main.webContents.send("users", message.data);
-        break;
-      //ADD_CLIENT
-      case 7:
-        win.main.webContents.send("newClient", message.data);
-        break;
-      //CLIENT_NEXTSTAGE
-      case 8:
-        win.main.webContents.send("changedStage", message.data);
-        break;
-      //ADD_USER
-      case 9:
-        win.main.webContents.send("addUser", message.data);
-        break;
-      //REMOVE_USER
-      case 10:
-        win.main.webContents.send("removeUser", message.data);
-        break;
-      //Not a defined message code
-      default:
-        console.log('Unrecognized message');
-        break;
+      sendOnceLoaded("updatedClients", {cliarr: message.data, stage: 1});
     }
+    
+    if (message.event < 3) {
+      win.main.webContents.send("updatedClients", {cliarr: message.data, stage: message.event+1});
+    } else {
+      const eventNames = ['updateOneClient', 'addComment', 'delComment', 'users', 'newClient', 'changedStage', 'addUser', 'removeUser'];
+      win.main.webContents.send(eventNames[message.event-3], message.data);
+    }
+
     /**
      * Sends a message once the win.main content has loaded
      * @param {string} event The event name
